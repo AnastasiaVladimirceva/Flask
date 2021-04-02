@@ -149,7 +149,7 @@ def edit_news(id):
     form = NewsForm()
     if request.method == "GET":
         db_sess = db_session.create_session()
-        news = db_sess.query(News).filter(News.id == id,l
+        news = db_sess.query(News).filter(News.id == id,
                                           News.user == current_user
                                           ).first()
         if news:
